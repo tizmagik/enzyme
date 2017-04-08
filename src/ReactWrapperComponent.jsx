@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import objectAssign from 'object.assign';
+import { PropTypes, createClass } from './react-compat';
 
 /* eslint react/forbid-prop-types: 0 */
 
@@ -89,5 +90,5 @@ export default function createWrapperComponent(node, options = {}) {
     });
   }
 
-  return React.createClass(spec);
+  return createClass(spec);
 }
